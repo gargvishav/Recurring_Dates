@@ -1,0 +1,342 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+/* body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+} */
+/* General Body Styling */
+/* body {
+  font-family: "Arial", sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.date-picker {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.date-picker h1 {
+  font-size: 2rem;
+  color: #4a4a4a;
+  margin-bottom: 1rem;
+}
+
+.recurrence-options {
+  margin-bottom: 1.5rem;
+}
+
+.recurrence-options label {
+  font-weight: bold;
+  color: #4a4a4a;
+}
+
+.recurrence-options select {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.custom-recurrence {
+  margin-bottom: 1.5rem;
+}
+
+.custom-recurrence h4 {
+  font-size: 1.25rem;
+  color: #4a4a4a;
+  margin-bottom: 0.5rem;
+}
+
+.custom-recurrence label {
+  font-weight: bold;
+}
+
+.custom-recurrence input,
+.custom-recurrence select {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  margin-top: 0.5rem;
+}
+
+.date-range-selector {
+  margin-bottom: 1.5rem;
+}
+
+.date-range-selector label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.date-range-selector input {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.mini-calendar-preview {
+  margin-top: 1.5rem;
+}
+
+.mini-calendar-preview h4 {
+  font-size: 1.25rem;
+  color: #4a4a4a;
+  margin-bottom: 0.5rem;
+}
+
+.mini-calendar-preview .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 0.5rem;
+}
+
+.mini-calendar-preview .grid div {
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+button {
+  background-color: #0070f3;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #005bb5;
+} */
+/* General Body Styling */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Container Styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* DatePicker Component */
+.date-picker {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  border: 1px solid #e0e0e0;
+}
+
+/* Header */
+.date-picker h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #0070f3;
+  padding-bottom: 0.5rem;
+}
+
+/* Recurrence Options */
+.recurrence-options {
+  margin-bottom: 1.5rem;
+}
+
+.recurrence-options label {
+  font-weight: bold;
+  color: #0070f3;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.recurrence-options select {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #f8f9fa;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.recurrence-options select:focus {
+  border-color: #0070f3;
+  outline: none;
+}
+
+/* Custom Recurrence */
+.custom-recurrence {
+  margin-bottom: 1.5rem;
+}
+
+.custom-recurrence h4 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid #0070f3;
+  padding-bottom: 0.5rem;
+}
+
+.custom-recurrence label {
+  font-weight: bold;
+  color: #0070f3;
+}
+
+.custom-recurrence input,
+.custom-recurrence select {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #f8f9fa;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.custom-recurrence input:focus,
+.custom-recurrence select:focus {
+  border-color: #0070f3;
+  outline: none;
+}
+
+/* Date Range Selector */
+.date-range-selector {
+  margin-bottom: 1.5rem;
+}
+
+.date-range-selector label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #0070f3;
+}
+
+.date-range-selector input {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #f8f9fa;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.date-range-selector input:focus {
+  border-color: #0070f3;
+  outline: none;
+}
+
+/* Mini Calendar Preview */
+.mini-calendar-preview {
+  margin-top: 1.5rem;
+}
+
+.mini-calendar-preview h4 {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid #0070f3;
+  padding-bottom: 0.5rem;
+}
+
+.mini-calendar-preview .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 0.75rem;
+}
+
+.mini-calendar-preview .grid div {
+  background: linear-gradient(135deg, #6a1b9a, #8e24aa);
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 0.75rem;
+  text-align: center;
+  font-size: 0.875rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Buttons */
+button {
+  background-color: #0070f3;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #005bb5;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Form Elements */
+input[type="date"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #f8f9fa;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input[type="date"]:focus,
+input[type="number"]:focus,
+select:focus {
+  border-color: #0070f3;
+  outline: none;
+}
